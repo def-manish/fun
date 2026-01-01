@@ -1,0 +1,148 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .question {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            position: relative;
+            height: 60px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: absolute;
+        }
+
+        .yes-btn {
+            background: #4CAF50;
+            color: white;
+            left: 50px;
+            top: 0;
+        }
+
+        .yes-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .no-btn {
+            background: #f44336;
+            color: white;
+            right: 50px;
+            top: 0;
+            transition: all 0.3s ease;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .no-btn:hover {
+            background: #da190b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(244, 67, 54, 0.4);
+        }
+
+        .response {
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            line-height: 1.6;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .response.show {
+            display: block;
+        }
+
+        .yes-response {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 2px solid #4CAF50;
+        }
+
+        .no-response {
+            background: #ffebee;
+            color: #c62828;
+            border: 2px solid #f44336;
+        }
+
+        .reset-btn {
+            background: #2196F3;
+            color: white;
+            margin-top: 20px;
+            padding: 12px 30px;
+            display: none;
+            position: relative;
+            left: 0;
+            right: 0;
+        }
+
+        .reset-btn.show {
+            display: inline-block;
+        }
+
+        .reset-btn:hover {
+            background: #0b7dda;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
